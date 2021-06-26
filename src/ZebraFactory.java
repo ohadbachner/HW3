@@ -2,32 +2,48 @@ public class ZebraFactory extends AnimalFactory implements Animal{
     private static int numberOfZebras = 0;
     public ZebraFactory (){
         super();
-        numberOfZebras += 1;
+
     }
     @Override
-    public void feedAnimals() {
+    public void feedAnimal() {
         System.out.println("The zebra is eating grass...");
-        if (super.getHunger() - 1 < 1){
-            super.setHunger(1);
+        if (AnimalFactory.getHunger() - 1 < 1){
+            AnimalFactory.setHungerhigheorlow(1);
         }
         else {
-            super.setHunger(super.getHunger() -1);
+            AnimalFactory.setHunger();
         }
     }
 
     @Override
-    public void watchAnimals() {
+    public void watchAnimal() {
         System.out.println("The zebra is running...");
-        if (super.getHunger() +1 > 5){
-            super.setHunger(5);
+        if (AnimalFactory.getHunger() +1 > 5 && AnimalFactory.getHappiness() + 1 > 5){
+            AnimalFactory.setHungerhigheorlow(5);
+            AnimalFactory.setHappinesshigheorlow(5);
         }
-        if (super.getHappiness() + 1 > 5){
-            super.setHappiness(5);
+        if (AnimalFactory.getHappiness() + 1 > 5 && AnimalFactory.getHunger() +1 < 5 ){
+            AnimalFactory.setHappinesshigheorlow(5);
+            AnimalFactory.setHunger();
+        }
+        if (AnimalFactory.getHappiness() + 1 <5 && AnimalFactory.getHunger() +1 > 5 ){
+            AnimalFactory.setHappiness();
+            AnimalFactory.setHungerhigheorlow(5);
+        }
+        else {
+            AnimalFactory.setHappiness();
+            AnimalFactory.setHunger();
         }
     }
 
     @Override
     public Animal createAnimal() {
+        numberOfZebras += 1;
+        AnimalFactory.addcount();
         return new ZebraFactory();
+    }
+
+    public static int getNumberOfZebras() {
+        return numberOfZebras;
     }
 }
