@@ -2,7 +2,8 @@ public abstract class AnimalFactory {
     private static int numberOfAnimals = 0;
     private static int happiness;
     private static int hunger;
-    public AnimalFactory (){
+
+    public AnimalFactory() {
         this.happiness = 2;
         this.hunger = 3;
     }
@@ -23,23 +24,26 @@ public abstract class AnimalFactory {
         happiness = happiness1;
     }
 
-
-
     public static void setHungerhigheorlow(int hunger1) {
         hunger = hunger1;
     }
 
     public static void setHunger() {
-        AnimalFactory.hunger += 1;
+        hunger += 1;
+    }
+
+    public static void setLowerHunger() {
+        hunger -= 1;
     }
 
     public static void setHappiness() {
-        AnimalFactory.happiness += 1;
+        happiness += 1;
     }
 
-    public static void addcount(){
-        numberOfAnimals +=1;
+    public static void addcount() {
+        numberOfAnimals += 1;
     }
+
     public abstract Animal createAnimal();
 
 }

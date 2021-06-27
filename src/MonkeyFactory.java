@@ -12,14 +12,28 @@ public class MonkeyFactory extends AnimalFactory implements Animal{
             AnimalFactory.setHungerhigheorlow(1);
         }
         else {
-            AnimalFactory.setHunger();
+            AnimalFactory.setLowerHunger();
         }
     }
 
     @Override
     public void watchAnimal() {
         System.out.println("The monkey is hanging on trees...");
-        if (AnimalFactory.getHunger() +1 > 5 && AnimalFactory.getHappiness() + 1 > 5){
+        if (AnimalFactory.getHunger() +1 > 5 || AnimalFactory.getHappiness() +1 > 5) {
+            if (AnimalFactory.getHunger() +1 > 5) {
+                AnimalFactory.setHungerhigheorlow(5);
+            }
+            if (AnimalFactory.getHappiness() +1 > 5) {
+                AnimalFactory.setHappinesshigheorlow(5);
+            }
+        }
+        else{
+            AnimalFactory.setHunger();
+            AnimalFactory.setHappiness();
+        }
+
+
+       /* if (AnimalFactory.getHunger() +1 > 5 && AnimalFactory.getHappiness() + 1 > 5){
             AnimalFactory.setHungerhigheorlow(5);
             AnimalFactory.setHappinesshigheorlow(5);
         }
@@ -34,7 +48,7 @@ public class MonkeyFactory extends AnimalFactory implements Animal{
         else {
             AnimalFactory.setHappiness();
             AnimalFactory.setHunger();
-        }
+        }*/
     }
 
     @Override

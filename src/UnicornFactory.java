@@ -11,28 +11,24 @@ public class UnicornFactory extends AnimalFactory implements Animal{
             AnimalFactory.setHungerhigheorlow(1);
         }
         else {
-            AnimalFactory.setHunger();
+            AnimalFactory.setLowerHunger();
         }
     }
 
     @Override
     public void watchAnimal() {
         System.out.println("The unicorn is flying...");
-        if (AnimalFactory.getHunger() +1 > 5 && AnimalFactory.getHappiness() + 1 > 5){
-            AnimalFactory.setHungerhigheorlow(5);
-            AnimalFactory.setHappinesshigheorlow(5);
+        if (AnimalFactory.getHunger() +1 > 5 || AnimalFactory.getHappiness() +1 > 5) {
+            if (AnimalFactory.getHunger() +1 > 5) {
+                AnimalFactory.setHungerhigheorlow(5);
+            }
+            if (AnimalFactory.getHappiness() +1 > 5) {
+                AnimalFactory.setHappinesshigheorlow(5);
+            }
         }
-        if (AnimalFactory.getHappiness() + 1 > 5 && AnimalFactory.getHunger() +1 < 5 ){
-            AnimalFactory.setHappinesshigheorlow(5);
+        else{
             AnimalFactory.setHunger();
-        }
-        if (AnimalFactory.getHappiness() + 1 <5 && AnimalFactory.getHunger() +1 > 5 ){
             AnimalFactory.setHappiness();
-            AnimalFactory.setHungerhigheorlow(5);
-        }
-        else {
-            AnimalFactory.setHappiness();
-            AnimalFactory.setHunger();
         }
     }
 
