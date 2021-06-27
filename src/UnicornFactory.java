@@ -16,7 +16,7 @@ public class UnicornFactory extends AnimalFactory implements Animal{
 
     @Override
     public Animal createAnimal() {
-        AnimalFactory.addcount();
+        AnimalFactory.addCount();
         numberOfUnicorns +=1;
         return new UnicornFactory();
     }

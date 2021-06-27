@@ -10,7 +10,7 @@ public abstract class AnimalFactory {
         return numberOfAnimals;
     }
 
-    public static void addcount() {
+    public static void addCount() {
         numberOfAnimals += 1;
     }
 

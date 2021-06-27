@@ -17,7 +17,7 @@ public class ZebraFactory extends AnimalFactory implements Animal{
     @Override
     public Animal createAnimal() {
         numberOfZebras += 1;
-        AnimalFactory.addcount();
+        AnimalFactory.addCount();
         return new ZebraFactory();
     }
 
