@@ -12,7 +12,7 @@ public class ZooObserver implements Observer {
 
     /**
      * updates the observers
-     * @param desc saves the messages that need to send to the observes.
+     * @param desc saves the messages that need to be sent to the observes.
      */
     @Override
     public void update(String desc) {

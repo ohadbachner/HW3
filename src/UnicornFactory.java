@@ -2,7 +2,7 @@ public class UnicornFactory extends AnimalFactory implements Animal{
     private static int numberOfUnicorns = 0;
 
     /**
-     * the constructor calling the super class constructor
+     * the constructor calls the super class constructor
      */
     public UnicornFactory(){
         super();
@@ -10,7 +10,7 @@ public class UnicornFactory extends AnimalFactory implements Animal{
     }
 
     /**
-     * the method print what the animal eat
+     * the method prints what the animal eats
      */
     @Override
     public void feedAnimal() {
@@ -18,7 +18,7 @@ public class UnicornFactory extends AnimalFactory implements Animal{
     }
 
     /**
-     * the method print what the animal doing in a show
+     * the method prints what the animal is doing in the show
      */
     @Override
     public void watchAnimal() {
@@ -26,7 +26,8 @@ public class UnicornFactory extends AnimalFactory implements Animal{
     }
 
     /**
-     * creating new unicorn adding to the unicorn number and adding to the total animal
+     * creating a new unicorn, adding to the unicorn number and adding to
+     * the total animal number
      * @return new unicorn
      */
     @Override
@@ -38,7 +39,7 @@ public class UnicornFactory extends AnimalFactory implements Animal{
 
     /**
      *
-     * @return the numbers of unicorn we have
+     * @return the numbers of unicorns we have
      */
     public static int getNumberOfUnicorns() {
         return numberOfUnicorns;

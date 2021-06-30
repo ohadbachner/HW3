@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Zoo {
+public class Zoo  {
     private final ArrayList<Animal> animals;
     private final ArrayList<ZooObserver> observers;
     private static Zoo instance = null;
@@ -172,3 +172,4 @@ public class Zoo {
         }
     }
 }
+

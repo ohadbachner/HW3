@@ -17,15 +17,14 @@ public abstract class AnimalFactory {
     }
 
     /**
-     * add on animal every time
+     * add an animal every time
      */
     public static void addCount() {
         numberOfAnimals += 1;
     }
 
     /**
-     * abstract class that need to use in other sub class to create new animal
-     * @return
+     * abstract method that need to use in other sub class to create new animal
      */
     public abstract Animal createAnimal();
 
